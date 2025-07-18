@@ -5,26 +5,6 @@ from ultralytics import YOLO
 import supervision as sv
 from shapely.geometry import Point, Polygon
 
-region_colors = [
-    # 6 màu mát (xanh lá, xanh dương, tím)
-    (0, 255, 0),    # Xanh lá tươi
-    (0, 255, 255),  # Xanh lam (cyan)
-    (128, 0, 255),  # Tím nhạt
-    (86, 0, 254),   # Tím đậm
-    (0, 204, 153),  # Xanh ngọc
-    (0, 128, 255),  # Xanh dương
-
-    # 8 màu nóng (đỏ, cam, vàng)
-    (255, 0, 0),    # Đỏ tươi
-    (255, 34, 134), # Hồng phấn
-    (255, 102, 0),  # Cam đậm
-    (255, 255, 0),  # Vàng tươi
-    (235, 183, 0),  # Vàng đậm
-    (255, 51, 51),  # Đỏ nhạt
-    (204, 102, 0),  # Cam cháy
-    (255, 153, 102) # San hô
-]
-
 class MultipleObjectCounter:
     def __init__(self, model_path, regions=None, class_names=["car"], show=True, show_in=True, show_out=True, line_width=2):
         """
@@ -201,6 +181,23 @@ class MultipleObjectCounter:
         return frame
 
 if __name__ == '__main__':
+    region_colors = [
+        (0, 255, 0),
+        (0, 255, 255),
+        (128, 0, 255),  
+        (86, 0, 254),   
+        (0, 204, 153),  
+        (0, 128, 255),  
+
+        (255, 0, 0),    
+        (255, 34, 134), 
+        (255, 102, 0),  
+        (255, 255, 0),  
+        (235, 183, 0),  
+        (255, 51, 51),  
+        (204, 102, 0),  
+        (255, 153, 102) 
+    ]
     # Định nghĩa các vùng
     region_points = [
         [[890, 14], [889, 65], [410, 65], [409, 14]],

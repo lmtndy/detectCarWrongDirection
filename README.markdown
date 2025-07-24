@@ -3,6 +3,12 @@
 ## Overview
 This project implements a vehicle lane violation detection system using the YOLOv11 model from Ultralytics. It processes a video input to detect and track cars, counting the number of vehicles entering and exiting defined regions (lanes) to identify potential lane violations. The system uses OpenCV for video processing, Supervision for annotations, and Shapely for geometric calculations.
 
+## Demo
+
+| **Before Fine-tuning (YOLOv11 Pretrained)** | **After Fine-tuning** |
+|:------------------------------------------:|:---------------------:|
+| ![Before Fine-tuning](demo/output_org.gif) | ![After Fine-tuning](demo/output.gif) |
+
 ## Features
 - Detects cars in a video stream using the YOLOv11 model.
 - Tracks vehicles across frames and counts entries/exits in multiple defined regions.
